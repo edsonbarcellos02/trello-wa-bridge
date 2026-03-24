@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Trello to WhatsApp Bridge",
+  "version": "1.0.0",
+  "description": "Gera logs de status profissionais do Trello para o WhatsApp com um clique.",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {},
+  "content_scripts": [
+    {
+      "matches": ["https://trello.com/c/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["activeTab"]
+}
